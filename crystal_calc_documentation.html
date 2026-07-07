@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional case study documentation for the Glassmorphism Calculator — Week 1 internship project | By Tanishq Saxena." />
+  <title>Crystal Calc — Project Case Study</title>
+  <link rel="stylesheet" href="./doc-style.css" />
+</head>
+
+<body>
+  <header class="nav-wrap">
+    <nav class="container glass">
+      <a class="brand" href="#top">
+        <span class="brand-mark">T</span>
+        <span>Crystal Calc / Case Study</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#structure">Structure</a>
+        <a href="#styling">Styling</a>
+        <a href="#logic">Logic</a>
+        <a href="#challenges">Challenges</a>
+        <a href="#learning">Learning</a>
+        <a href="./index.html" id="back-home">Calculator</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <div>
+        <span class="eyebrow">First Week Internship Project</span>
+        <h1>Building a <span class="gradient-text">Glassmorphism Calculator.</span></h1>
+
+        <p class="hero-copy">
+          A professional development case study documenting how I designed and built
+          a responsive calculator using only HTML, CSS, and JavaScript — from visual
+          direction and page structure to input validation, keyboard support, and
+          the challenges solved along the way.
+        </p>
+
+        <div class="hero-meta">
+          <span class="meta-pill">Assigned: July 6, 2026</span>
+          <span class="meta-pill">Web Development Internship</span>
+          <span class="meta-pill">HTML • CSS • JavaScript</span>
+        </div>
+      </div>
+
+      <div class="visual-shell" aria-label="Calculator design preview">
+        <div class="calculator-mock glass">
+          <div class="mock-top">
+            <span>Crystal Calc</span>
+            <span>•••</span>
+          </div>
+          <div class="mock-display">1,337</div>
+          <div class="mock-keys">
+            <div class="key action">AC</div><div class="key action">DEL</div><div class="key op">%</div><div class="key op">÷</div>
+            <div class="key">7</div><div class="key">8</div><div class="key">9</div><div class="key op">×</div>
+            <div class="key">4</div><div class="key">5</div><div class="key">6</div><div class="key op">−</div>
+            <div class="key">1</div><div class="key">2</div><div class="key">3</div><div class="key op">+</div>
+            <div class="key zero">0</div><div class="key">.</div><div class="key equals">=</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="content-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-number">01 / Overview</span>
+            <h2>The brief & direction.</h2>
+          </div>
+          <p class="section-intro">
+            This calculator was assigned as my first-week internship project. I chose
+            to go beyond a basic utility interface and build a polished, responsive
+            experience with a glass-inspired visual system.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="icon">01</div>
+            <h3>Functional Goal</h3>
+            <p>Support common arithmetic operations, decimals, percentage input, clear, delete, and reliable result handling.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">02</div>
+            <h3>Visual Goal</h3>
+            <p>Create a centered premium interface using translucent surfaces, backdrop blur, gradients, soft borders, and depth.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">03</div>
+            <h3>Experience Goal</h3>
+            <p>Make the calculator responsive, keyboard-friendly, readable, and pleasant to use across desktop and smaller screens.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="structure" class="content-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-number">02 / Structure</span>
+            <h2>Three clear layers.</h2>
+          </div>
+          <p class="section-intro">
+            I organized the project around the core separation of concerns used in
+            frontend development: HTML for structure, CSS for presentation, and
+            JavaScript for behavior.
+          </p>
+        </div>
+
+        <div class="architecture">
+          <article class="layer glass">
+            <small>HTML</small>
+            <h3>Structure Layer</h3>
+            <p>Defines the wrapper, calculator body, display, keypad, action controls, operators, and semantic page hierarchy.</p>
+          </article>
+
+          <article class="layer glass">
+            <small>CSS</small>
+            <h3>Presentation Layer</h3>
+            <p>Controls the responsive grid, glass effect, gradients, background composition, transitions, shadows, and animations.</p>
+          </article>
+
+          <article class="layer glass">
+            <small>JAVASCRIPT</small>
+            <h3>Behavior Layer</h3>
+            <p>Handles expression state, button events, keyboard input, validation, deletion, clearing, evaluation, and errors.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="styling" class="content-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-number">03 / Styling</span>
+            <h2>Designing the glass.</h2>
+          </div>
+          <p class="section-intro">
+            Transparency alone does not create convincing glassmorphism. The final
+            appearance comes from layering blur, contrast, borders, lighting,
+            saturation, gradients, and carefully controlled shadows.
+          </p>
+        </div>
+
+        <div class="split">
+          <article class="panel glass">
+            <h3>Visual System</h3>
+            <p>The calculator body and controls share a consistent material language.</p>
+            <ul class="check-list">
+              <li>Semi-transparent surfaces</li>
+              <li>Backdrop blur and saturation</li>
+              <li>Subtle white borders</li>
+              <li>Cyan and purple accent gradients</li>
+              <li>Layered ambient shadows</li>
+              <li>Soft rounded geometry</li>
+            </ul>
+          </article>
+
+          <article class="panel glass">
+            <h3>Interaction System</h3>
+            <p>Small feedback details make the interface feel responsive and intentional.</p>
+            <ul class="check-list">
+              <li>Lift effect on hover</li>
+              <li>Pressed state on click</li>
+              <li>Smooth CSS transitions</li>
+              <li>Distinct operator styling</li>
+              <li>Prominent equals action</li>
+              <li>Subtle floating animation</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="logic" class="content-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-number">04 / Logic</span>
+            <h2>From input to result.</h2>
+          </div>
+          <p class="section-intro">
+            The JavaScript logic keeps track of the current expression, validates
+            important input cases, updates the display, and safely handles invalid
+            calculations without breaking the interface.
+          </p>
+        </div>
+
+        <div class="flow">
+          <div class="flow-step"><b>01</b><span>User enters a value</span></div>
+          <div class="flow-step"><b>02</b><span>Event listener detects input</span></div>
+          <div class="flow-step"><b>03</b><span>Input is validated</span></div>
+          <div class="flow-step"><b>04</b><span>Expression state updates</span></div>
+          <div class="flow-step"><b>05</b><span>Result or error is displayed</span></div>
+        </div>
+
+        <div class="cards" style="margin-top: 18px;">
+          <article class="card">
+            <h3>Decimal Validation</h3>
+            <p>The current number segment is checked before another decimal point is accepted, preventing values such as 12.5.7.</p>
+          </article>
+          <article class="card">
+            <h3>Operator Handling</h3>
+            <p>If consecutive operators are entered, the latest operator can replace the previous one to reduce malformed expressions.</p>
+          </article>
+          <article class="card">
+            <h3>Keyboard Support</h3>
+            <p>Numbers and operators work from the keyboard, while Enter calculates, Backspace deletes, and Escape clears the state.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="challenges" class="content-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-number">05 / Challenges</span>
+            <h2>Problems I solved.</h2>
+          </div>
+          <p class="section-intro">
+            The project became more valuable when visual and logic issues appeared.
+            Each challenge pushed me to improve the implementation instead of only
+            completing the minimum requirement.
+          </p>
+        </div>
+
+        <div class="challenge-grid">
+          <article class="challenge">
+            <span class="tag">Visual</span>
+            <h3>The glass looked like plain transparency</h3>
+            <p>Using a transparent background alone did not create enough depth or material realism.</p>
+            <p class="solution"><strong>Solution:</strong> I combined backdrop blur, saturation, borders, gradients, highlights, and shadows.</p>
+          </article>
+
+          <article class="challenge">
+            <span class="tag">Layout</span>
+            <h3>The final keypad row needed correction</h3>
+            <p>The equals button initially occupied more grid space than intended and affected the alignment.</p>
+            <p class="solution"><strong>Solution:</strong> I corrected the grid span so 0, decimal, and equals remain on the same row.</p>
+          </article>
+
+          <article class="challenge">
+            <span class="tag">Logic</span>
+            <h3>Multiple decimal points created invalid numbers</h3>
+            <p>Without validation, a user could add more than one decimal point inside the same number segment.</p>
+            <p class="solution"><strong>Solution:</strong> I inspect the active numeric segment before accepting another decimal.</p>
+          </article>
+
+          <article class="challenge">
+            <span class="tag">Reliability</span>
+            <h3>Invalid expressions could interrupt the experience</h3>
+            <p>Malformed input needed to fail gracefully rather than leaving the calculator in a broken state.</p>
+            <p class="solution"><strong>Solution:</strong> I added controlled error handling and reset behavior for safe recovery.</p>
+          </article>
+
+          <article class="challenge">
+            <span class="tag">Precision</span>
+            <h3>Floating-point results could become unnecessarily long</h3>
+            <p>JavaScript decimal arithmetic can sometimes expose awkward floating-point precision artifacts.</p>
+            <p class="solution"><strong>Solution:</strong> I normalized displayed precision before presenting the final value.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="learning" class="content-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-number">06 / Learning</span>
+            <h2>What this project taught me.</h2>
+          </div>
+          <p class="section-intro">
+            The biggest lesson was that a small application can still require
+            thoughtful decisions across structure, visual design, validation,
+            responsiveness, interaction, and maintainability.
+          </p>
+        </div>
+
+        <div class="stats">
+          <div class="stat glass"><strong>3</strong><span>Core web technologies</span></div>
+          <div class="stat glass"><strong>4</strong><span>Key UI states</span></div>
+          <div class="stat glass"><strong>5+</strong><span>Major challenges solved</span></div>
+          <div class="stat glass"><strong>100%</strong><span>Frontend implementation</span></div>
+        </div>
+
+        <div class="cards" style="margin-top: 18px;">
+          <article class="card">
+            <h3>Frontend Architecture</h3>
+            <p>I strengthened my understanding of separating structure, presentation, and behavior into clear responsibilities.</p>
+          </article>
+          <article class="card">
+            <h3>UI Engineering</h3>
+            <p>I learned how visual polish comes from combining many small decisions rather than relying on one CSS property.</p>
+          </article>
+          <article class="card">
+            <h3>Defensive Logic</h3>
+            <p>I improved at anticipating invalid user input and designing logic that keeps the interface stable and predictable.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="container conclusion glass">
+      <span class="eyebrow">Final Reflection</span>
+      <h2>From a simple calculator brief to a complete frontend case study.</h2>
+      <p>
+        This Week 1 internship project gave me practical experience in transforming
+        a basic requirement into a more polished product. By combining structured
+        HTML, responsive CSS, modern glassmorphism, JavaScript state handling,
+        keyboard interaction, validation, and error recovery, I built a project that
+        strengthened both my development and interface-design skills.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>Crystal Calc — First Week Project Documentation By Tanishq Saxena</span>
+      <span>Assigned on July 6, 2026 • Built with HTML, CSS & JavaScript</span>
+      <span>2026 Copyright Tanishq Saxena</span>
+      <span>DOMAIN CODE : IPWD742</span>
+
+    </div>
+  </footer>
+</body>
+</html>
