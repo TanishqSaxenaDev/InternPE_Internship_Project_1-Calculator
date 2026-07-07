@@ -10,11 +10,8 @@ Instead of building a traditional calculator interface, I designed **Crystal Cal
 
 ## ✨ Project Preview
 
-> Add your project screenshot here.
+<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/fdd9c814-5bc8-4c23-aca5-6fd3da84743e" />
 
-```md
-![Crystal Calc Preview](./assets/calculator-preview.png)
-```
 
 ---
 
