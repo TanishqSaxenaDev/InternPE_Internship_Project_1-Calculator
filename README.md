@@ -12,6 +12,7 @@ Instead of building a traditional calculator interface, I designed **Crystal Cal
 
 <img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/fdd9c814-5bc8-4c23-aca5-6fd3da84743e" />
 
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/7b07de90-b819-4c82-bc9c-b8953b4ec43e" />
 
 ---
 
